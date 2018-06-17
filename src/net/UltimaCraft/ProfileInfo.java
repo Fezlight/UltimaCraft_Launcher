@@ -24,7 +24,7 @@ public class ProfileInfo extends JPanel {
 	public JLabel offline = new JLabel("Offline");
 	public JLabel finish = new JLabel("Terminé");
 	static String[] ramList = { "2G", "3G", "4G", "5G" };
-	public static JComboBox ram = new JComboBox(ramList);
+	public static JComboBox<String> ram = new JComboBox<String>(ramList);
 
 	static GridBagConstraints gridBagConstraints2 = null;
 	static GridBagConstraints gridBagConstraints3 = null;

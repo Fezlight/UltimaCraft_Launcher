@@ -18,12 +18,11 @@ import javax.swing.JProgressBar;
 import net.UltimaCraft.ui.Options;
 
 public class bar extends JDialog {
+	private static final long serialVersionUID = 7474688701152784937L;
 	private Thread t;
 	private JProgressBar bar;
-	private JButton launch;
 	static JButton texturepacks;
 	static JLabel finish;
-	private LauncherV2 launcher;
 
 	File Dir = new File(Util.getWorkingDirectory() + "/resourcepacks");
 	final String adresse = (Link.URL_BASE_LOCALHOST + Link.URL_Minecraft_Enhanced);
@@ -39,8 +38,8 @@ public class bar extends JDialog {
 		this.setLocationRelativeTo(options);
 		this.setAlwaysOnTop(true);
 
-		this.texturepacks = profileInfo.texturepacks;
-		this.finish = profileInfo.finish;
+		texturepacks = profileInfo.texturepacks;
+		finish = profileInfo.finish;
 
 		bar = new JProgressBar();
 		bar.setStringPainted(true);
@@ -62,7 +61,6 @@ public class bar extends JDialog {
 				URLConnection conn = url.openConnection();
 				conn.addRequestProperty("User-Agent",
 						"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0");
-				String FileType = conn.getContentType();
 
 				InputStream in = conn.getInputStream();
 				reader = new BufferedReader(new InputStreamReader(in));

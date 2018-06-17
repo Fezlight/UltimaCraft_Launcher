@@ -13,6 +13,5 @@ public class Border extends JPanel {
 		g.setColor(Color.DARK_GRAY);
 		// On le dessine de sorte qu'il occupe toute la surface
 		g.fillRect(0, 0, 0, 0);
-
 	}
 }

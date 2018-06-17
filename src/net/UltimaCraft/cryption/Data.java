@@ -72,7 +72,6 @@ public class Data {
 	/**
 	 * Get UUID of player
 	 * 
-	 * @param player
 	 * @return UUID
 	 */
 	public String getUUIDs() {
@@ -96,6 +95,9 @@ public class Data {
 		return null;
 	}
 
+	/**
+	 * Saving all player data
+	 */
 	public void saveData() {
 		String newPassword = null;
 		try {
